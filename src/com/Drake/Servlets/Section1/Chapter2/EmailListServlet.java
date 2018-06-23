@@ -42,15 +42,16 @@ public class EmailListServlet extends HttpServlet {
             } else {
                 PrintWriter out = response.getWriter();
                 out.println("<script type=\"text/javascript\">");
-                out.println("alert('Backend Error Has Occurred in UserDB');");
+                out.println("alert('Backend Error Has Occurred in UserDB + a git change');");
                 out.println("location='index.jsp';");
                 out.println("</script>");
+                out.println("<div>random div</div>");
             }
 
-
+//added comment
         }
 
-        //forward request and response objects to specified URL
+        //edited commentforward request and response objects to specified URL
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
