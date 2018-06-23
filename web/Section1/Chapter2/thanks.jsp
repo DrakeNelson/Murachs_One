@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="styles/main.css" type="text/css"/>
 </head>
 <body>
-<h1> Thanks for Joining our email list</h1>
+<h1> Thanks a lot for Joining our email list</h1>
 <p> here is the information that you entered:</p>
 <label>Email:</label>
 <span>${user.email}</span><br/>
