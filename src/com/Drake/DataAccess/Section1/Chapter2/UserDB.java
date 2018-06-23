@@ -35,7 +35,7 @@ public class UserDB {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
 
-            connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/murach?&user="+DAC.userName+"&password="+DAC.password);
+            connection = DriverManager.getConnection("jdbc:mariadb://"+DAC.ip+":"+DAC.port+"/"+DAC.dbname+"?&user="+DAC.userName+"&password="+DAC.password);
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println("Error in the java connection with MariaDB");
             e.printStackTrace();
