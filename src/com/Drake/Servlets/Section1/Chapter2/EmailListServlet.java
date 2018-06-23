@@ -24,7 +24,7 @@ public class EmailListServlet extends HttpServlet {
             action = "join";//default action join stops the event ** join seems to be a conventional end thread symbol **
         }
 
-        // perform action and set URL to appropriate page
+        // perform action and set URL to appropriate pages
         if (action.equals("join")) {
             url = "/Section1/Chapter2/index.html";
         } else if (action.equals("add")) {
@@ -50,7 +50,7 @@ public class EmailListServlet extends HttpServlet {
 
         }
 
-        //forward request and response objects to specified URL
+        //forward request and response objects to  specified URL
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);

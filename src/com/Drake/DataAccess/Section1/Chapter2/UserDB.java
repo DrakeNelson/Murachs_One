@@ -40,6 +40,7 @@ public class UserDB {
             System.err.println("Error in the java connection with MariaDB");
             e.printStackTrace();
             return false;
+            //comment
         }
         return true;
     }
