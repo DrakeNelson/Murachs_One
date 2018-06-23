@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 
 public class EmailListServlet extends HttpServlet {
 
@@ -34,11 +35,19 @@ public class EmailListServlet extends HttpServlet {
 
             // store data in User object aqnd save User object in database
             User user = new User(firstName, lastName, email);
-            UserDB.insert(user);
+            if (UserDB.insert(user)) {
+                // set User object in request object and set url
+                request.setAttribute("user", user);
+                url = "/Section1/Chapter2/thanks.jsp"; // the "thanks page"
+            } else {
+                PrintWriter out = response.getWriter();
+                out.println("<script type=\"text/javascript\">");
+                out.println("alert('Backend Error Has Occurred in UserDB');");
+                out.println("location='index.jsp';");
+                out.println("</script>");
+            }
 
-            // set User object in request object and set url
-            request.setAttribute("user", user);
-            url = "/Section1/Chapter2/thanks.jsp"; // the "thanks page"
+
         }
 
         //forward request and response objects to specified URL
