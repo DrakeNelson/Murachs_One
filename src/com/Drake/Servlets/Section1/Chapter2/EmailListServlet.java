@@ -50,7 +50,7 @@ public class EmailListServlet extends HttpServlet {
 
         }
 
-        //forward request and response objects to  specified URL
+        //forward request and response objects to specified URL
         getServletContext()
                 .getRequestDispatcher(url)
                 .forward(request, response);
