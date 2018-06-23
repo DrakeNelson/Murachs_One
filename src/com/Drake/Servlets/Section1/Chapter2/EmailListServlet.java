@@ -55,7 +55,7 @@ public class EmailListServlet extends HttpServlet {
                 .getRequestDispatcher(url)
                 .forward(request, response);
     }
-
+    //git test
     //handle HTTP requests that use the GET method
     @Override
     protected void doGet(HttpServletRequest request,
