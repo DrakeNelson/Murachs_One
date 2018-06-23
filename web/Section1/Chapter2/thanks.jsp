@@ -1,11 +1,14 @@
+<jsp:useBean id="user" scope="request" type="com.Drake.business.Section1.Chapter2.User"/>
 <%--
   Created by IntelliJ IDEA.
   User: drake
   Date: 6/22/2018
   Time: 9:02 PM
+   //git test
+
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <meta charset="utf-8">
