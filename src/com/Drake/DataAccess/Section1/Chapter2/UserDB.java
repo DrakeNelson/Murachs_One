@@ -1,5 +1,6 @@
 package com.Drake.DataAccess.Section1.Chapter2;
 
+import com.Drake.DAC;
 import com.Drake.business.Section1.Chapter2.User;
 
 import java.sql.Connection;
@@ -34,7 +35,7 @@ public class UserDB {
         try {
             Class.forName("org.mariadb.jdbc.Driver");
 
-            connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/murach?&user=root&password=T0kyO88");
+            connection = DriverManager.getConnection("jdbc:mariadb://localhost:3306/murach?&user="+DAC.userName+"&password="+DAC.password);
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println("Error in the java connection with MariaDB");
             e.printStackTrace();
