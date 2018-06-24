@@ -40,12 +40,7 @@ public class EmailListServlet extends HttpServlet {
                 request.setAttribute("user", user);
                 url = "/Section1/Chapter2/thanks.jsp"; // the "thanks page"
             } else {
-                PrintWriter out = response.getWriter();
-                out.println("<script type=\"text/javascript\">");
-                out.println("alert('Backend Error Has Occurred in UserDB + a git change');");
-                out.println("location='index.jsp';");
-                out.println("</script>");
-                out.println("<div>random div</div>");
+                System.err.println("error in the data access layer thrown by " + this.getClass().toString());
             }
 
 //added comment
