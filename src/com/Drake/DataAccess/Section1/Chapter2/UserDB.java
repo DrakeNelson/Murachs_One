@@ -28,29 +28,17 @@ public class UserDB {
             return false;
         }
 
-        return disconnect();
+        return DAC.disconnect(connection);
     }
 
     private static boolean setConnection() {
         try {
-            Class.forName("org.mariadb.jdbc.Driver");
-
-            connection = DriverManager.getConnection("jdbc:"+DAC.dbt+"://"+DAC.ip+":"+DAC.port+"/"+DAC.dbname+"?&user="+DAC.userName+"&password="+DAC.password);
+            connection = DAC.getConnection();
         } catch (SQLException | ClassNotFoundException e) {
             System.err.println("Error in the java connection with MariaDB");
             e.printStackTrace();
             return false;
             //comment
-        }
-        return true;
-    }
-
-    private static boolean disconnect() {
-        try {
-            connection.close();
-        } catch (SQLException e) {
-            System.err.println("Error in closing the java connection with MariaDB");
-            return false;
         }
         return true;
     }

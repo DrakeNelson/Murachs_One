@@ -1,0 +1,11 @@
+JavaScript shiv
+The JavaScript shiv lets older browsers know about the elements
+<script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+Include this script element that runs a javascript shiv that tells the browser that the semantic elements are being used.
+
+Before using CSS to format the semantic elements in older browsers set CSS rule.
+article, aside, figure, figcaption, footer, header, nav, section {
+    display: block;
+}
+Without this older browsers may treat the items as inline elements.
+
