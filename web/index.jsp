@@ -8,9 +8,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
+    <jsp:include page="/Resources/ReusableParts/DrakeNavHead.jsp"/>
     <title>Murach's Java Servlets and JSP</title>
+
 </head>
 <body>
+<jsp:include page="/Resources/ReusableParts/DrakeNav.jsp"/>
+
 <h1>Murach's Java Servlets and JSP</h1>
 <p>I am using this page to index all of the practice work I do with this book.</p>
 <p>Rather than creating a bunch of individual webapps while working through this tutorial, <br/> I am creating this one
@@ -26,7 +30,7 @@
                         <h3>Chapter 2 Example</h3>
                     </td>
                     <td>
-                        <a href="${pageContext.request.contextPath}/Section1/Chapter2/">How to structure a web application with the MVC pattern</a>
+                        <a href="${pageContext.request.contextPath}/Murachs/Section1/Chapter2/">How to structure a web application with the MVC pattern</a>
                     </td>
                 </tr>
             </table>

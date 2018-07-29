@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Form HTML</title>
+</head>
+<body>
+<h1>Student Form HTML</h1>
+<form action="StudentResponse.jsp">
+    <!-- first name input -->
+    <label>
+        First Name:
+        <input type="text" name="firstName"/>
+    </label>
+    <br/><br/>
+    <!-- last name input -->
+    <label>
+        Last Name:
+        <input type="text" name="lastName"/>
+    </label>
+    <br/><br/>
+    <!-- country drop down box  -->
+    <label>
+        Country:
+        <select name="Country">
+            <option>Brazil</option>
+            <option>France</option>
+            <option>Germany</option>
+            <option>India</option>
+            <option>Turkey</option>
+            <option>United Kingdom</option>
+            <option>United States of America</option>
+        </select>
+    </label>
+    <br/><br/>
+    <!-- favorite language radio button -->
+    <label>
+        Favorite Programming Language<br/>
+        <label><input type="radio" name="favoriteLangRB" value="Java"/>Java</label>
+        <label><input type="radio" name="favoriteLangRB" value="PHP"/>PHP</label>
+        <label><input type="radio" name="favoriteLangRB" value="C"/>C</label>
+        <label><input type="radio" name="favoriteLangRB" value="Ruby"/>Ruby</label>
+    </label>
+    <br/><br/>
+    <!-- known language check boxes -->
+    <label>
+        Known Programming Language<br/>
+        <label><input type="checkbox" name="favoriteLangCB" value="Java"/>Java</label>
+        <label><input type="checkbox" name="favoriteLangCB" value="PHP"/>PHP</label>
+        <label><input type="checkbox" name="favoriteLangCB" value="C"/>C</label>
+        <label><input type="checkbox" name="favoriteLangCB" value="Ruby"/>Ruby</label>
+    </label>
+    <br/><br/>
+
+    <!-- call the action Step1 in the first element -->
+    <input type="submit" value="Sumbit"/>
+
+</form>
+</body>
+</html>

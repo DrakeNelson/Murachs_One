@@ -1,0 +1,36 @@
+Servlets
+    Java Class that is processed on the server
+    Java class generates HTML that is returned to the browser
+    Can read HTML form data, use cookies and sessions etc...
+    at a high-level, similar functionality to JSPs
+
+Servlets
+Process something on the server
+Browser Sends -> Request to server
+    Server Processes it
+Servlet Sends -> <html> to browser
+
+//similar to jsp but we create java class first and put out.println on all of the HTML that we send back to the browser
+@WebServlet("/HelloWorldServlet")
+public class HelloWorldServlet extends HttpServlet {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)  throws ServletException, IOException {
+
+    / Step 1: set the content type
+    response.setContentType("text/html");
+
+    // Step 2: get the printWriter
+    PrintWriter out = response.getWriter();
+
+    //step 3: generate HTML content
+    out.println("<html><body>");
+
+    out.println("<h2>Hello World</h2>");
+    out.println("<hr>");
+    out.println("time on the server is: " + new java.util.Date());
+
+    Out.println("</body></html>");
+    }
+}
+
+Note: While I have included this in the directory structure of the web folder there aren't actually any files here,
+      This is because the files are actually in the classes up above

@@ -10,7 +10,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>EmailListServlet</servlet-name>
-        <url-pattern>/Section1/Chapter2/EmailListServlet</url-pattern>
+        <url-pattern>/Murachs/Section1/Chapter2/EmailListServlet</url-pattern>
     </servlet-mapping>
 
     <session-config>
@@ -22,4 +22,15 @@
         <welcome-file>index.html</welcome-file>
         <welcome-file>index.jsp</welcome-file>
     </welcome-file-list>
+
+    <!-- luv2code servlets -->
+    <servlet>
+        <servlet-name>ServletDemo</servlet-name>
+        <servlet-class>com.luv2code.Step5.ServletDemo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ServletDemo</servlet-name>
+        <url-pattern>/Step5/ServletDemo</url-pattern>
+    </servlet-mapping>
 </web-app>

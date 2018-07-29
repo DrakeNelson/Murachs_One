@@ -1,0 +1,58 @@
+Cookies
+
+Personalize a web site for a user
+
+Keep track of user preferences
+    -long term
+    -even after browser is closed
+    -cookies are sent back and forth to the associated domain when the page is accessed
+    -Name / Value Pairs
+        example {
+            Name: firstName
+            Value: Drake
+        }
+
+Cookie api
+    - cookie class define in package : javax.servlet.http
+    - package imported for free in all JSP pages
+
+Cookie Constructor
+    Cookie(String name, String value)
+    //constructs a cookie with the specified with name and value
+
+Cookies API - Sending Cookies to Browser with JSP
+<%
+    String favLang = request.getParameter("favoriteLanguage");
+    //create cookie
+    Cookie theCookie = new Cookie("myApp.favoriteLanguage", favLang);
+    //set life span ... total number of seconds
+    theCookie.setMaxAge(60*60*24*365);//1 year = 60 sec * 60 min * 24 hour * 365 day
+    // send cookie to browser
+    response.addCookie(theCookie);
+%>
+
+Cookies API - Reading Cookies from the Browser
+<%
+    //set a default
+    String favLang = "java";
+    //build an array of cookies
+    Cookie[] theCookies = request.getCookies();
+    //check to see if there are any cookies
+    if (theCookies != null) {
+        //loop through the cookies
+        for (Cookie tempCookie : theCookies) {
+            //if the cookie to examine is the one in the loop
+            if ("myApp.favoritelanguage".equals(tempCookie.getName())) {
+                //set a value equal to the value associated with the name of the cookie
+                favLang = tempCookie.getValue();
+                break;
+            }
+        }
+    }
+%>
+
+the list of things to do
+create html form to personalize site
+create jsp to read data and set cookies
+create home page to read cookies and display personalized data
+

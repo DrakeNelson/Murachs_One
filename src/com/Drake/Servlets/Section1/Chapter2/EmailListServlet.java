@@ -16,7 +16,7 @@ public class EmailListServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request,
                           HttpServletResponse response) throws ServletException, IOException {
-        String url = "/index.html";
+        String url = "/DrakeNav.jsp";
 
         // get current action
         String action = request.getParameter("action");
@@ -26,7 +26,7 @@ public class EmailListServlet extends HttpServlet {
 
         // perform action and set URL to appropriate pages
         if (action.equals("join")) {
-            url = "/Section1/Chapter2/index.html";
+            url = "/Murachs/Section1/Chapter2/DrakeNav.jsp";
         } else if (action.equals("add")) {
             // get parameters from the request
             String firstName = request.getParameter("firstName");
@@ -38,7 +38,7 @@ public class EmailListServlet extends HttpServlet {
             if (UserDB.insert(user)) {
                 // set User object in request object and set url
                 request.setAttribute("user", user);
-                url = "/Section1/Chapter2/thanks.jsp"; // the "thanks page"
+                url = "/Murachs/Section1/Chapter2/thanks.jsp"; // the "thanks page"
             } else {
                 System.err.println("error in the data access layer thrown by " + this.getClass().toString());
             }
