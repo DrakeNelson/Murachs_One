@@ -45,7 +45,7 @@
                         <h3>Chapter 1 ?</h3>
                     </td>
                     <td>
-                        <a href="http://www.google.com">google placeholder</a>
+                        <a href="http://www.d2jsp.org/">google placeholder</a>
                     </td>
                 </tr>
             </table>
